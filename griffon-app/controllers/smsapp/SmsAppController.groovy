@@ -72,6 +72,7 @@ class SmsAppController {
 		for(c in evt.source.text){
 			if(c == '\n')
 				nbChariot++
+				
 		}
 
 		if(evt.source.text.length() + nbChariot >140)
