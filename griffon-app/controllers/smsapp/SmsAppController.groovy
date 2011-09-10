@@ -28,7 +28,7 @@ class SmsAppController {
 			try {
 
 
-				withHttp(uri: "http://rest.nexmo.com/sms/"){
+				withHttp(uri: "http://rest.nexmo.com/sms/tutu"){
 					def postBody = [username:'36b0915c',password:'91d80755',from:'Ouistitis',to:'33666206355',text:model.scriptSource] // will be url-encoded
 					//pour test ko 
 					//def postBody = [username:'36b0915c',password:'91d80755',from:'Ouistitis',text:'toto'] // will be url-encoded
@@ -72,7 +72,6 @@ class SmsAppController {
 		for(c in evt.source.text){
 			if(c == '\n')
 				nbChariot++
-				
 		}
 
 		if(evt.source.text.length() + nbChariot >140)
